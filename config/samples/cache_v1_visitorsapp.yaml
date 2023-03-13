@@ -1,0 +1,13 @@
+apiVersion: cache.example.com/v1
+kind: VisitorsApp
+metadata:
+  labels:
+    app.kubernetes.io/name: visitorsapp
+    app.kubernetes.io/instance: visitorsapp-sample
+    app.kubernetes.io/part-of: visitor-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: visitor-operator
+  name: visitorsapp-sample
+spec:
+  size: 1
+  title: Ansible Deployed Visitors Site
