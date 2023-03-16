@@ -1,3 +1,4 @@
+# Do not give such a wide ranging scope of permissions in operator. This is for illustration and testing only. NOT for prod
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -10,10 +11,13 @@ rules:
   - apiGroups:
       - ""
     resources:
-      - secrets
       - pods
-      - pods/exec
-      - pods/log
+      - services
+      - endpoints
+      - persistentvolumeclaims 
+      - events
+      - configmaps 
+      - secrets    
     verbs:
       - create
       - delete
