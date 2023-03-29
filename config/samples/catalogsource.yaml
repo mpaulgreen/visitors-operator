@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: vistors-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: Visitors operator
+  publisher: Arch POC
+  sourceType: grpc
+  image: quay.io/mpaulgreen/visitor-operator-catalog:v0.0.2 
+  updateStrategy:
+    registryPoll:
+      interval: 1m
